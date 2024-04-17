@@ -45,12 +45,12 @@ for (let span = 0; span < slides.length; span++) {
 
 
 	span_dot.addEventListener('click', function(){
-		img_obj = slides[span]
-		banner_img.setAttribute("src", path_img + img_obj.image);
-		banner_description.innerHTML = img_obj['tagLine'];
+		let img_obj = slides[span]
+		banner_img.setAttribute("src", path_img + img_obj.image)
+		banner_description.innerHTML = img_obj.tagLine
 		
-		const dots = document.querySelectorAll('.dot');
-		dots[index].classList.remove('dot_selected');
+		const dots = document.querySelectorAll('.dot')
+		dots[index].classList.remove('dot_selected')
 		
 		span_dot.className='dot dot_selected';
 		index = span
@@ -70,8 +70,8 @@ function slideSuivant(){
 	}
 
 	img_obj = slides[index]
-	banner_img.setAttribute("src", path_img + img_obj.image);
-	banner_description.innerHTML = img_obj['tagLine'];
+	banner_img.setAttribute("src", path_img + img_obj.image)
+	banner_description.innerHTML = img_obj.tagLine
 	dots[index].classList.add('dot_selected')
 }
 
@@ -85,8 +85,8 @@ function slidePrecedente (){
 	}
 
 	img_obj = slides[index]
-	banner_img.setAttribute("src", path_img + img_obj.image);
-	banner_description.innerHTML = img_obj['tagLine'];
+	banner_img.setAttribute("src", path_img + img_obj.image)
+	banner_description.innerHTML = img_obj.tagLine
 	dots[index].classList.add('dot_selected')
 
 }
